@@ -1,0 +1,137 @@
+/*
+
+Benoit Bucher
+Date: April 2020;
+
+Description: this file is the CSS style file called in my HTML file
+
+*/
+
+
+/* When we apply properties to the body balise, all the page will be impacted */
+body
+{
+    background-color: #FFFFFF; /* rgb(47,72,87); rgb(96,114,114); rgb(118,143,140); rgb(64,78,102);*/ /* page background as it is declared in body */
+    /*color: #000000; /* rgb(210, 213, 219);*/ /* text color */
+    /*font-family: Work Sans;
+    /*font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;*/
+    margin: auto 0;
+}
+
+.cover {
+    flex: 1;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+/* The container is to organise the page */
+
+/*#mainWrapper
+{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}*/
+
+
+/* Header */
+
+header
+{
+
+    position: fixed; /*sticky*/
+
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    height: 64px;
+
+    background-color: blue;
+
+}
+
+
+
+/* .menu
+{
+    background-color: rgba(100, 100, 100, 0.5);
+}*/
+
+
+
+/* Navigation */
+
+
+
+/* Body */
+
+
+
+
+
+
+/*
+With the advent of the CSS flex model, solving the 100% height problem becomes very, 
+very easy: use height: 100%; display: flex on the parent, and flex: 1 on the child elements. 
+They'll automatically take up all the available space in their container.
+*/
+
+#websiteCore
+{
+    /*margin-top: 64px;*/
+
+    display: flex;
+
+    height: 100vh;
+
+    background-color: yellow;
+
+
+}
+
+#homepagePic
+{
+    flex: 1;
+
+    margin-top: 184px;
+    margin-bottom: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
+
+    background-image: url("pictures/homePage/P2470918-2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+/*#websiteCore
+{
+    margin-top: 64px;
+
+    height: 100vh;
+    width: 100%;
+}
+
+#homepagePic
+{
+    margin-top: 120px;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 24px;
+    height: 100%;
+
+    background-image: url("pictures/photo/P2470918-2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
+
+}
