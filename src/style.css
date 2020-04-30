@@ -8,10 +8,12 @@ Description: this file is the CSS style file called in my HTML file
 */
 
 
+/* Body */
+
 /* When we apply properties to the body balise, all the page will be impacted */
 body
 {
-    background-color: #FFFFFF; /* rgb(47,72,87); rgb(96,114,114); rgb(118,143,140); rgb(64,78,102);*/ /* page background as it is declared in body */
+    background-color: #FFFFFF; /* rgb(47,72,87);*/ /* page background as it is declared in body */
     /*color: #000000; /* rgb(210, 213, 219);*/ /* text color */
     /*font-family: Work Sans;
     /*font-style: normal;
@@ -21,30 +23,13 @@ body
     margin: auto 0;
 }
 
-.cover {
-    flex: 1;
-    width: 100%;
-    object-fit: cover;
-}
 
-
-
-/* The container is to organise the page */
-
-/*#mainWrapper
-{
-	display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-}*/
 
 
 /* Header */
 
 header
 {
-
     position: fixed; /*sticky*/
 
     width: 100%;
@@ -53,46 +38,60 @@ header
     height: 64px;
 
     background-color: blue;
+}
 
+/* Fixed top bar left part */
+
+/* Click zone */
+
+#menuLogoClickZone
+{
+    position: absolute;
+    width: 203px;/*187px;*/
+    height: 48px;
+    left: 8px; /*16px;*/
+    top: 8px;
+}
+
+/* Logo vector */
+
+#menuLogo
+{
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 8px;/*16px;*/
+    top: 0px;/*8px;*/
+}
+
+#menuTitle
+{
+    position: absolute;
+    width: 123px;
+    height: 26px;
+    left: 64px;/*80px;*/
+    top: 11px;/*19px;*/
+}
+
+/* Fixed top bar right part: Navigation */
+nav
+{
+    position: absolute;
+    right: 24px;
 }
 
 
 
-/* .menu
-{
-    background-color: rgba(100, 100, 100, 0.5);
-}*/
+/* The container is to organise the page */
 
-
-
-/* Navigation */
-
-
-
-/* Body */
-
-
-
-
-
-
-/*
-With the advent of the CSS flex model, solving the 100% height problem becomes very, 
-very easy: use height: 100%; display: flex on the parent, and flex: 1 on the child elements. 
-They'll automatically take up all the available space in their container.
-*/
 
 #websiteCore
 {
-    /*margin-top: 64px;*/
-
     display: flex;
 
     height: 100vh;
 
     background-color: yellow;
-
-
 }
 
 #homepagePic
@@ -108,30 +107,103 @@ They'll automatically take up all the available space in their container.
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
 
+/* Footer */
+
+footer
+{    
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 100%;
+    height: 64px;
+}
+
+/* copyright */
+
+footer p
+{
+    position: absolute;
+    
+    height: 9px;
+    width: 189px;
+    left: calc(50% - 189px/2 - 0.5px);
+    bottom: 16px;
 }
 
 
-/*#websiteCore
-{
-    margin-top: 64px;
 
-    height: 100vh;
+
+/* --- FONTS --- */
+/* ------------- */
+
+/* top bar title */
+
+.topBarTitleFont
+{
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22.6px;
+    line-height: 26px;
+    color: #000000;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* light text */
+
+.textLightFont
+{
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+
+    /* identical to box height, or 150% */
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* tertiary */
+
+.tertiaryFont
+{
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 9px;
+    color: rgba(61, 61, 61, 0.9);
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+
+/*.cover {
+    flex: 1;
     width: 100%;
-}
+    object-fit: cover;
+}*/
 
-#homepagePic
+/*#mainWrapper
 {
-    margin-top: 120px;
-    margin-left: 24px;
-    margin-right: 24px;
-    margin-bottom: 24px;
-    height: 100%;
-
-    background-image: url("pictures/photo/P2470918-2.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
 }*/
 
 }
