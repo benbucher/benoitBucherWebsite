@@ -62,6 +62,9 @@ header
     height: 48px;
     left: 8px;/*16px;*/
     top: 0px;/*8px;*/
+
+    background-image: url("logo/logoVector.svg");
+    background-size: contain;
 }
 
 #menuTitle
@@ -69,7 +72,7 @@ header
     position: absolute;
     width: 123px;
     height: 26px;
-    left: 64px;/*80px;*/
+    left: 72px;/*80px;*/
     top: 11px;/*19px;*/
 }
 
@@ -127,8 +130,8 @@ footer p
     position: absolute;
     
     height: 9px;
-    width: 189px;
-    left: calc(50% - 189px/2 - 0.5px);
+    width: 200px;/*189px;*/
+    left: calc(50% - 200px/2);/*calc(50% - 189px/2 - 0.5px);*/
     bottom: 16px;
 }
 
@@ -142,15 +145,16 @@ footer p
 
 .topBarTitleFont
 {
-    font-family: Roboto Condensed;
+    font-family: 'Roboto Condensed', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 22.6px;
     line-height: 26px;
     color: #000000;
-
-    display: flex;
-    align-items: center;
+    
+    /*display: flex;*/
+    align-items: left;
+    margin:auto;
 }
 
 
@@ -158,7 +162,7 @@ footer p
 
 .textLightFont
 {
-    font-family: Work Sans;
+    font-family: 'Work Sans', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
@@ -176,16 +180,32 @@ footer p
 
 .tertiaryFont
 {
-    font-family: Work Sans;
+    font-family: 'Work Sans', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 8px;
     line-height: 9px;
     color: rgba(61, 61, 61, 0.9);
 
-    display: flex;
-    align-items: center;
+    /*display: flex;
+    align-items: center;*/
     text-align: center;
+    margin:auto;
+}
+
+/* quote */
+
+.quoteFont
+{
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22.6px;
+    line-height: 30px;
+    color: #FFFFFF;
+
+    display: flex;
+    align-items: center;    
 }
 
 
