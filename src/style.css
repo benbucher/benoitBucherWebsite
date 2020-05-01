@@ -114,21 +114,24 @@ nav a:hover
 
 
 
-/* homepage container */
+/* homepage MAIN container applicable to index.html page and photo.html page */
 
 #homepageCore
 {
     display: flex;
+    flex-direction: column;
 
-    height: 100vh;
+    min-height: 100vh; /* it allows to have the footer bellow the scroll even if the page is smaller than the viewport height */
 
     background-color: yellow;
 }
 
+/* homepage container */
+
 #homepagePic
 {
-    flex: 1;
-
+    flex: 1; /* for the picture to fill the whole area available of the parent */
+    
     margin-top: 184px;
     margin-bottom: 24px;
     margin-left: 24px;
@@ -137,41 +140,30 @@ nav a:hover
     background-image: url("pictures/homePage/P2470918-2.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; /* fill all the available space without change in aspect ratio */
 }
 
 /* photopage container */
 
-#photopageCore
-{
-    display: flex;
-
-    flex-direction: column;
-
-    background-color: yellow;
-
-    /*height: 50vh;*/
-}
-
 #photopageAlbum
 {
-    /*flex: 1;*/
     display: flex;
     flex-direction: row;
     justify-content: start;
     flex-wrap: wrap;
 
-    margin-top: 160px;
+    margin-top: 160px; /* top margin is provided by each child item */
     margin-bottom: 24px;
-    margin-left: 0px;
+    margin-left: 0px; /* left margin is provided by each child item */
     margin-right: 24px;
+
+    /* note: no size shall be specified with flex not explicitely; it is defined in the child */
 }
 
 .photoAlbumItem
 {
-    width: calc((100% - 4 * 24px) / 4);
-    height: 30vh;
-    /*padding-bottom: 60%;*/
+    width: calc((100% - 4 * 24px) / 4); /* four blockes per row in desktop version */
+    height: 30vh; /*padding-bottom: 60%;*/
     margin-top: 24px;
     margin-left: 24px;
 
@@ -181,12 +173,14 @@ nav a:hover
 /* Footer */
 
 footer
-{    
-    position: absolute;
+{   
+    /*clear: both;*/
+    position: relative;
+    height: 64px;
     left: 0%;
     right: 0%;
-    top: 100%;
-    height: 64px;
+    bottom: -64px;
+    margin-top: -64px;
 }
 
 
@@ -291,6 +285,16 @@ footer p
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-start;
+}*/
+
+/* #photopageCore
+{
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+
+    background-color: yellow;
 }*/
 
 }
