@@ -1,14 +1,18 @@
+
 /*
 
-Benoit Bucher
-Date: April 2020;
+Author: Benoit Bucher
+Date: April 2020
 
 Description: this file is the CSS style file called in my HTML file
 
 */
 
 
-/* Body */
+
+/* ---- BODY ---- */
+/* -------------- */
+
 
 /* When we apply properties to the body balise, all the page will be impacted */
 body
@@ -80,15 +84,39 @@ header
 nav
 {
     position: absolute;
-    right: 24px;
+    top: 12px; /* the menu is at 20px from the top (8px padding in nav a) */
+    right: 28px; /* the menu is at 32px from the right (4px padding in nav a) */
+    height: 40px; /* height of 24px + 8px padding on top and bottom for click zone */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 340px;
+}
+
+nav a
+{
+    /* Each menu category is spaced by 32 px */
+    /* Padding is added to increase link touch target */
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    text-decoration: none; /* underline */
+}
+
+nav a:hover
+{
+    /* underline link when mouse hover over it */
+    text-decoration: underline;
 }
 
 
 
-/* The container is to organise the page */
+/* homepage container */
 
-
-#websiteCore
+#homepageCore
 {
     display: flex;
 
@@ -112,6 +140,44 @@ nav
     background-size: cover;
 }
 
+/* photopage container */
+
+#photopageCore
+{
+    display: flex;
+
+    flex-direction: column;
+
+    background-color: yellow;
+
+    /*height: 50vh;*/
+}
+
+#photopageAlbum
+{
+    /*flex: 1;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+
+    margin-top: 160px;
+    margin-bottom: 24px;
+    margin-left: 0px;
+    margin-right: 24px;
+}
+
+.photoAlbumItem
+{
+    width: calc((100% - 4 * 24px) / 4);
+    height: 30vh;
+    /*padding-bottom: 60%;*/
+    margin-top: 24px;
+    margin-left: 24px;
+
+    background-color: purple;
+}
+
 /* Footer */
 
 footer
@@ -122,6 +188,7 @@ footer
     top: 100%;
     height: 64px;
 }
+
 
 /* copyright */
 
@@ -170,8 +237,8 @@ footer p
     color: #000000;
 
     /* identical to box height, or 150% */
-    display: flex;
-    align-items: center;
+    /*display: flex;
+    align-items: center;*/
     text-align: center;
 }
 
