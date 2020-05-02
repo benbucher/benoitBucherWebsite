@@ -200,17 +200,13 @@ nav a:hover
 
 .photoAlbumItemPic
 {
-    height: calc(100% - 16px - 26px); /* set the size 100% minus the title height and the margin */
-    width: 100%;
-
+    display: block;
+    
     margin-top: 16px;
     margin-bottom: 0px;
-}
 
-.albumVignette
-{
-    height: 100%; /* set size to the same as the parent one for the picture to fill the whole container */
-    width: 100%;
+    height: calc(100% - 16px - 26px); /* set the size 100% minus the title height and the margin */
+    width: 100%; /* set size to the same as the parent one for the picture to fill the whole container */
 
     object-fit: cover; /* fill all the available space without change in aspect ratio */
     object-position: center;   
