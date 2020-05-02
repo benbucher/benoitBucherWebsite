@@ -10,9 +10,13 @@
 
 		  gtag('config', 'UA-119227657-1');
 		</script>
-		
+
+		<!-- Embed google fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto+Condensed|Work+Sans&display=swap" rel="stylesheet"> 
+
     	<!-- This is the header of the internet page -->
-		<link rel="stylesheet" href="style.css" />
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
         <title>benoit bucher</title>
         <link rel="icon" type="image/jpg" href="favicon/favicon.png" />
 		<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon/favicon.ico" /><![endif]-->
@@ -21,49 +25,66 @@
     <body>
     	<!-- This is where the body of my page is to be written -->
 
-    	<!-- container definition. The main wrapper contain the whole page -->
 
-    	<div id="mainWrapper">
+    	<header>
 
-	    	<!-- Start of my structure -->    		
+        	<!-- left part of the fixed bar with logo and name -->
+			<a style="display:block" href="index.html">
+        	<div id="menuLogoClickZone">
+        		<div id="menuLogo">
+        			<!-- logo is added in the CSS sheet -->
+        		</div>
 
-	        <header>
-				<nav>
-					<a href="index.html"><img src="pictures/Logo3square.png" alt="sevenT logo" id="logo"></a>
-					<a href="visuals.html">Visuals</a>
-		            <a href="texts.html">Texts</a>
-		            <a href="about.html" class="currentPage">About</a>
-	        	</nav>
-	        </header>
-	        
-	        <div id="websiteCore">
+        		<div id="menuTitle">
+        			<p class="topBarTitleFont">benoit bucher</p>
+        		</div>
+        	</div>
+			</a>
 
-				<section>
-		            <article>                
-		                
-		                <h1>About</h1>
+        	<!-- right part of the fixed bar with menu categories -->
+        	<nav>
+				<a href="index.html" class="textLightFont">HOME</a>
+				<a href="profile.html" class="textLightFont">PROFILE</a>
+	            <a href="photo.html" class="textLightFont">PHOTO</a>
+	            <a href="contact.html" class="textLightFont">CONTACT</a>
+        	</nav>
+			
+        </header>
 
-						<h2>Interests</h2>
 
-				        <p>I am interested in science, literature, art, environment, architecture and design. Beauty and perfection obsess me, be it in mathematics or in a painting. Hard work is my religion and hopefully creativity would help me to take the best out of it. I believe that art, science and whatever makes you passionate, is the key to making great things and bring the best out of you. Long walks in the city or by the sea is where I find rest.</p>
+        <div id="homepageCore">
 
-				        <h2>Bio</h2>
+			<div id="homepagePic">
+				<!-- homepage picture added in the CSS sheet -->
+			</div>
 
-				        <p>Born in 1991, I lived in France most of my life. After high school I decided to study mathematics, physics and chemistry in a selective training to enter French engineering graduate programs. Six years later, I graduated from my dreamed aerospace engineering program with a master's degree. After a few months abroad for my end of study internship I started working as an aerospace engineer in Toulouse.</p>
+			<section>
+	            <article>                
+	                
+	                <h1>About</h1>
 
-				        <p>While studying hard in sciences at school, I have never stopped being interested in art. In my free time, I kept drawing, reading, going to the museum and making small handicraft works. 2017 is when I decided that creation and fun would have to be more important in my life. Even though my engineering job is fascinating, I wanted to develop other capabilities and potential. That is why I created this website, to share and emphasise on creative aspects. It intends to give more power and room to this trait of my personality. Year 2017 has been a major change for me. I bought my first camera in May and created <em>sevenT</em> in November. It is great fun, and it makes me happy and I hope you'll enjoy it as much as I do.</p>	
-				        
-		            </article>
+					<h2>Interests</h2>
 
-		        </section>
+			        <p>I am interested in science, literature, art, environment, architecture and design.</p>
 
-		        <footer>
-		            <p>copyright <em>sevenT</em> - all rights reserved</p>
-		        </footer>
+			        <h2>Bio</h2>
 
-	        </div>
+			        <p>Born in 1991, I lived in France most of my life.</p>
 
-		</div>
+			        <p>I bought my first camera in May. It is great fun.</p>	
+			        
+	            </article>
+	        </section>
+
+        </div>
+
+
+        <footer>
+
+            <p class="tertiaryFont">copyright © 2020 benoit bucher all rights reserved</p>
+
+        </footer>
+
 
     </body>
 </html>
