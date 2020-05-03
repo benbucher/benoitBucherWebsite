@@ -267,6 +267,20 @@ nav a:hover
     object-position: center;   
 }
 
+/* contactpage container */
+
+#contactpageMain
+{
+    /* TO BE COMPLETED */
+
+    flex: 1; /* for the picture to fill the whole area available of the parent */
+    
+    margin-top: 184px;
+    margin-bottom: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
+
+}
 
 /* Footer */
 
