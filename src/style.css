@@ -142,6 +142,61 @@ nav a:hover
     background-size: cover; /* fill all the available space without change in aspect ratio */
 }
 
+/* profilepage container */
+
+#profilepageMain
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    margin: auto;
+    margin-top: 184px;
+    margin-bottom: 24px;
+    width: 760px;
+}
+
+/* main container for the profile picture and the about text */
+
+#aboutMain
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 80px;
+}
+
+#profilepageMain p
+{
+    margin: 0px; /* no margin for the quote and the description, margin are adde in the other surrounding components if needed */
+    text-align: left; /* align text of the quote and of the description on the left */
+}
+
+.profilePic
+{
+    display: block;
+    object-fit: cover; /* fill all the available space without change in aspect ratio */
+    object-position: center;   
+
+    min-height: calc(100vh - 400px); /* set a minimum height for the picture to reach until bottom of page at least on big screans */
+    width: 364px; /* set width to half of the parent minus centre margin of 32px */
+}
+
+#aboutMain section
+{
+    width: 364px; /* set width to half of the parent minus centre margin of 32px */
+}
+
+#aboutMain h1
+{    
+    margin: 0px;
+    margin-bottom: 32px;
+    height: 38px;
+    
+    text-align: left;
+}
+
 /* photopage container */
 
 #photopageAlbum
@@ -261,7 +316,26 @@ footer p
 }
 
 
+/* title */
+
+.titleFont
+{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 37px;
+    color: #000000;
+
+    /* identical to box height */
+    /*display: flex;*/
+    align-items: center;
+    text-align: center;
+}
+
+
 /* subtitle font */
+
 .subtitleFont
 {
     font-family: 'Roboto Condensed', sans-serif;
@@ -269,11 +343,25 @@ footer p
     font-weight: normal;
     font-size: 22.6px;
     line-height: 26px;
-
     color: #000000;
 
     /*display: flex;*/
     align-items: center;
+}
+
+
+/* text */
+
+.textFont
+{
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+
+    /* or 150% */
 }
 
 
@@ -312,6 +400,24 @@ footer p
     margin:auto;
 }
 
+
+/* bigQuote */
+
+.bigQuoteFont
+{
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45.2px;
+    line-height: 150%;
+    color: #000000;
+
+    /* or 68px */
+    /*display: flex;*/
+    align-items: center;
+}
+
+
 /* quote */
 
 .quoteFont
@@ -323,7 +429,7 @@ footer p
     line-height: 30px;
     color: #FFFFFF;
 
-    display: flex;
+    /*display: flex;*/
     align-items: center;    
 }
 
