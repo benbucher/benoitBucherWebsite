@@ -271,15 +271,38 @@ nav a:hover
 
 #contactpageMain
 {
-    /* TO BE COMPLETED */
-
-    flex: 1; /* for the picture to fill the whole area available of the parent */
+    flex: 1; /* for the page to fill the whole area available of the parent */
     
-    margin-top: 184px;
-    margin-bottom: 24px;
-    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* the content is centered vertically */
+    align-items: center; /* the content is centered horizontally */
+
+    margin-top: 184px; /* same margin on bottom and top to have a minimum margin when the flex center behaviour is no more relevant when viewport size is too small */
+    margin-bottom: 184px;
+    margin-left: 24px; /* content is centered horizontally with flex, and minimum 24px margin is ensured */
     margin-right: 24px;
 
+}
+
+#contactpageMain section
+{
+    width: 364px; /* same width as the width of the description in the about section on the profile page */
+}
+
+#contactpageMain h1
+{
+    margin: 0px;
+    margin-bottom: 32px; /* margin between title and the text bellow */
+    height: 38px;
+    text-align: left; /* align text on the left */
+}
+
+#contactpageMain p
+{
+    margin: 0px;
+    margin-bottom: 48px; /* margin between the text and the icons bellow */
+    text-align: left; /* align text on the left */
 }
 
 /* Footer */
