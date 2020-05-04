@@ -226,6 +226,7 @@ nav a:hover
     margin-left: 24px;
 
     background-color: purple;
+    text-decoration: none; /* underline */
 }
 
 .photoAlbumTitle
