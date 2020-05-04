@@ -366,6 +366,63 @@ nav a:hover
     background-image: url("logo/iconMailColor.svg");
 }
 
+
+/* album000page container */
+
+#album000page
+{
+    flex: 1; /* for the page to fill the whole area available of the parent */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* the content starts at the top */
+    align-items: flex-start; /* the content starts on the left */
+
+    margin-top: 184px; /* same margin as all pages */
+    margin-bottom: 24px;
+    margin-left: 24px; /* 24px margin on left and right side */
+    margin-right: 24px;
+}
+
+#album000page section
+{
+    width: calc((100% - 24px) / 2); /* half a screen minus the margins (left and right margins are already taken into account on the above container, only the central one is accounted here) */
+}
+
+#album000page h2
+{
+    margin: 0px;
+    margin-bottom: 32px; /* title and description of the album are spaced by 32 px */
+    text-align: left;
+}
+
+#album000page p
+{
+    margin: 0px; /* no margin as the spacing is ensured by the above and bellow components */
+    text-align: left;
+}
+
+/* container for all the photos of one album */
+
+#albumPhotosContainer
+{
+    /* TODO: style to be completed to organize the disposition of the child pictures */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin-top: 80px; /* first picture is at 80px from the bottom of the album description */
+}
+
+.albumPhotosItem
+{
+    /* TODO: style of the album photo to be completed */
+    margin: 0px;
+    margin-bottom: 24px;
+}
+
 /* Footer */
 
 footer
