@@ -305,6 +305,51 @@ nav a:hover
     text-align: left; /* align text on the left */
 }
 
+/* contact page icons for social media */
+
+#socialMediaLinks
+{
+    /* TO BE COMPLETED */
+    display: flex;
+    flex-direction: row;
+    justify-content: left; /* the content is aligned on the left */
+
+    margin: 0px;
+}
+
+#socialMediaLinks a
+{
+    display: block;
+
+    margin: 0px;
+    margin-right: 28px;/*12px; /* spacing between icons is 28px minus 8px padding on each side */
+    /*padding: 8px;*/
+    width: 28px; /* icon size */
+    height: 28px;
+
+    background-size: contain; /* for each icon to fill the space of the size specified above */
+}
+
+#iconLinkedin
+{
+    background-image: url("logo/iconLinkedin.svg");
+}
+
+#iconTwitter
+{
+    background-image: url("logo/iconTwitter.svg");
+}
+
+#iconInstagram
+{
+    background-image: url("logo/iconInstagram.svg");
+}
+
+#iconMail
+{
+    background-image: url("logo/iconMail.svg");
+}
+
 /* Footer */
 
 footer
