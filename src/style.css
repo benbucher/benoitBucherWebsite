@@ -414,6 +414,24 @@ footer p
 }
 
 
+/* bigtitle font */
+
+.bigtitleFont
+{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45.2px;
+    line-height: 53px;
+    color: #000000;
+
+    /* identical to box height */
+    /*display: flex;*/
+    align-items: center;
+    text-align: center;    
+}
+
+
 /* title */
 
 .titleFont
