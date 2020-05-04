@@ -309,12 +309,11 @@ nav a:hover
 
 #socialMediaLinks
 {
-    /* TO BE COMPLETED */
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* put all the icons on one line */
     justify-content: left; /* the content is aligned on the left */
 
-    margin: 0px;
+    margin: 0px; /* no margin, nothing to be added bellow and main margin is provided by upper container */
 }
 
 #socialMediaLinks a
@@ -334,20 +333,36 @@ nav a:hover
 {
     background-image: url("logo/iconLinkedin.svg");
 }
+#iconLinkedin:hover
+{
+    background-image: url("logo/iconLinkedinColor.svg");
+}
 
 #iconTwitter
 {
     background-image: url("logo/iconTwitter.svg");
+}
+#iconTwitter:hover
+{
+    background-image: url("logo/iconTwitterColor.svg");
 }
 
 #iconInstagram
 {
     background-image: url("logo/iconInstagram.svg");
 }
+#iconInstagram:hover
+{
+    background-image: url("logo/iconInstagramColor.svg");
+}
 
 #iconMail
 {
     background-image: url("logo/iconMail.svg");
+}
+#iconMail:hover
+{
+    background-image: url("logo/iconMailColor.svg");
 }
 
 /* Footer */
