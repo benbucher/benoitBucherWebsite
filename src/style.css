@@ -416,12 +416,43 @@ nav a:hover
     margin-top: 80px; /* first picture is at 80px from the bottom of the album description */
 }
 
+/* TO BE REMOVED AS NOT CALLED IN HTML */
 .albumPhotosItem
 {
     /* TODO: style of the album photo to be completed */
     margin: 0px;
     margin-bottom: 24px;
+
+    /* tirer une width en % et une height en pixel ou alors laisser l'aspect ratio de base */
+    width: 100%;
+    /* tirer une position en % ou en px */
+
+    /* ou alors utiliser flexbox avec flex wrap en row et en flex start avec chaque item ayant des margins aleatoires et laisser flexwrap faire la job */
+    /* faire tirage pour les margins et pour la size des images */
+    /* generer taille et marge avec un custom code en javascript */
 }
+
+#album_001_photo_001
+{
+    margin: 24px;
+    width: 100%
+}
+#album_001_photo_002
+{
+    margin: 24px;
+    width: 100%
+}
+#album_001_photo_003
+{
+    margin: 24px;
+    width: 100%
+}
+#album_001_photo_004
+{
+    margin: 24px;
+    width: 100%
+}
+
 
 /* Footer */
 
