@@ -41,6 +41,7 @@ header
     height: 64px;
 
     background-color: white; /* blue; */
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */ /* drop shadow: xOffset yOffset blurRadius color */
 }
 
 /* Fixed top bar left part */
@@ -235,7 +236,7 @@ nav a:hover
     display: flex;
     flex-direction: row; /* put the title and the date on the same row */
     justify-content: space-between; /* put the title on the left and the date on the right */
-    align-items: center; /* centre item along secondary axis */
+    align-items: flex-end; /*center;*/ /* have the title and the date bottom on the same line along secondary axis */
 }
 
 .photoAlbumItem p
@@ -243,6 +244,7 @@ nav a:hover
     margin: 0px;
     width: 48px; /* a date will always fit in this box width */
     text-align: right;
+    padding-bottom: 4px; /* to have the title and date bottom aligned and componsate for the differente line height */
 }
 
 .photoAlbumItem h2
