@@ -40,7 +40,7 @@ header
     top: 0px;
     height: 64px;
 
-    background-color: blue;
+    background-color: white; /* blue; */
 }
 
 /* Fixed top bar left part */
@@ -73,7 +73,7 @@ header
 #menuTitle
 {
     position: absolute;
-    width: 123px;
+    width: 140px;
     height: 26px;
     left: 72px;/*80px;*/
     top: 11px;/*19px;*/
@@ -122,7 +122,7 @@ nav a:hover
 
     min-height: 100vh; /* it allows to have the footer bellow the scroll even if the page is smaller than the viewport height */
 
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 /* homepage container */
@@ -135,6 +135,7 @@ nav a:hover
     margin-bottom: 24px;
     margin-left: 24px;
     margin-right: 24px;
+    min-height: 400px; /* minimum height is defined here for the homepage picture in desktop version */
 
     background-image: url("pictures/homePage/P2470918-2.jpg");
     background-position: center;
@@ -225,7 +226,7 @@ nav a:hover
     margin-top: 40px; /*24px;*/
     margin-left: 24px;
 
-    background-color: purple;
+    /* background-color: purple; */
     text-decoration: none; /* underline */
 }
 
@@ -546,7 +547,7 @@ footer p
 {
     font-family: 'Work Sans', sans-serif;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 300; /* BE CAREFUL when using lighter weight, they have to be imported from fonts for each weight to be able to use it */
     font-size: 16px;
     line-height: 24px;
     color: #000000;
@@ -564,7 +565,7 @@ footer p
 {
     font-family: 'Work Sans', sans-serif;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 300; /* BE CAREFUL when using lighter weight, they have to be imported from fonts for each weight to be able to use it */
     font-size: 8px;
     line-height: 9px;
     color: rgba(61, 61, 61, 0.9);
