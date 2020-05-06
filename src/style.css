@@ -144,6 +144,24 @@ nav a:hover
     background-size: cover; /* fill all the available space without change in aspect ratio */
 }
 
+#homepagePic blockquote
+{
+    margin: 0px;
+}
+
+blockquote p
+{
+    margin: 80px 80px 24px 80px; /* top right bottom left */
+    text-align: left;
+}
+
+.nobreak
+{
+    /* this class is used to specified that a part of the text cannot be broken in two lines */
+    white-space: nowrap;
+}
+
+
 /* profilepage container */
 
 #profilepageMain
