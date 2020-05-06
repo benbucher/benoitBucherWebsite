@@ -108,8 +108,14 @@ nav a
 
 nav a:hover
 {
-    /* underline link when mouse hover over it */
-    text-decoration: underline;
+    text-decoration: underline; /* underline link when mouse hover over it */
+    text-underline-offset: 8px; /* set the space between text and underline to a higher value */
+}
+
+.curentPageMenu
+{
+    text-decoration: underline; /* underline link when mouse hover over it */
+    text-underline-offset: 8px; /* set the space between text and underline to a higher value */   
 }
 
 
