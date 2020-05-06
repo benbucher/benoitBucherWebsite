@@ -263,7 +263,7 @@ blockquote p
     align-items: flex-end; /*center;*/ /* have the title and the date bottom on the same line along secondary axis */
 }
 
-.photoAlbumItem p
+.photoAlbumTitle p
 {
     margin: 0px;
     width: 48px; /* a date will always fit in this box width */
@@ -416,17 +416,15 @@ blockquote p
     width: calc((100% - 24px) / 2); /* half a screen minus the margins (left and right margins are already taken into account on the above container, only the central one is accounted here) */
 }
 
-#album000page h2
-{
-    margin: 0px;
-    margin-bottom: 32px; /* title and description of the album are spaced by 32 px */
-    text-align: left;
-}
-
-#album000page p
+#album000page h2, #album000page p
 {
     margin: 0px; /* no margin as the spacing is ensured by the above and bellow components */
     text-align: left;
+}
+
+#album000page .photoAlbumTitle
+{
+    margin-bottom: 32px; /* title and description of the album are spaced by 32 px */
 }
 
 /* container for all the photos of one album */
