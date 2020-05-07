@@ -1,0 +1,24 @@
+{
+  "name": "benoitbucherwebsite",
+  "version": "0.1.0",
+  "description": "this is my website package",
+  "main": "index.js",
+  "dependencies": {
+    "postcss": "^7.0.29",
+    "stylelint": "^13.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benbucher/benoitBucherWebsite.git"
+  },
+  "author": "benoit bucher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benbucher/benoitBucherWebsite/issues"
+  },
+  "homepage": "https://github.com/benbucher/benoitBucherWebsite#readme"
+}
