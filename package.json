@@ -2,14 +2,15 @@
   "name": "benoitbucherwebsite",
   "version": "0.1.0",
   "description": "this is my website package",
-  "main": "index.js",
+  "main": "index.html",
   "dependencies": {
     "postcss": "^7.0.29",
     "stylelint": "^13.3.3"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node .\\src\\server.js"
   },
   "repository": {
     "type": "git",
