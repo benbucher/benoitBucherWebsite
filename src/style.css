@@ -40,9 +40,16 @@ header {
     height: 64px;
 
     background-color: white;
-    /* blue; */
-    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+
+    transition: all 0.35s ease-in-out;
+    /* transition timer to show the drop shadow */
+}
+
+/* Add a drop shadow to the header when scrolling using jQuery in a javascript file */
+
+header.active {
     /* drop shadow: xOffset yOffset blurRadius color */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* Fixed top bar left part */
