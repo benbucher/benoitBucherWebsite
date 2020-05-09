@@ -28,7 +28,6 @@ body {
 
 
 
-
 /* Header */
 
 header {
@@ -41,15 +40,36 @@ header {
 
     background-color: white;
 
-    transition: all 0.35s ease-in-out;
-    /* transition timer to show the drop shadow */
+    z-index: 9000;
+    /* header is above everything */
 }
 
-/* Add a drop shadow to the header when scrolling using jQuery in a javascript file */
+/* White rectangle to hide the drop shadow of the header when there is no scroll */
 
-header.active {
-    /* drop shadow: xOffset yOffset blurRadius color */
-    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.23);
+#dropShadowHeaderWhiteScreen {
+    position: absolute;
+    top: 64px;
+    /* the white rectangle shall be just below the header */
+    height: 10px;
+    /* the height of the white rectangle shall be as big as the offset position of the shadow plus the blur */
+    width: 100%;
+    background-color: white;
+    z-index: 2;
+    /* the white rectangle shall be below the header for it to remain hidden when scrolling down the page */
+}
+
+/* Drop shadow for the header that will appear when there is scroll */
+
+#dropShadowHeader {
+    position: fixed;
+    /* stays with the header */
+    top: 54px;
+    /* the shadow shall start just below the header */
+    height: 10px;
+    width: 100%;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.23);
+    z-index: 1;
+    /* the shadow shall be below the white rectangle */
 }
 
 /* Fixed top bar left part */
