@@ -9,33 +9,91 @@ This script will be called by each html album page to generate the width and mar
 
 */
 
-//import config from '.albums/album_001/album_001.json';
-//const data = requirejs('.albums/album_001/album_001.json');
 
+// REMOVE THE type=module in album html files if these lines below are not used
+//import config from './albums/album_001/album_001.json';
+//import config from './albums/album_001/album_001.js';
+//const data = requirejs('./albums/album_001/album_001.json');
+
+
+/*
+var request = new XMLHttpRequest();
+request.open("GET", "/albums/album_001/album_001.json", false);
+request.send(null)
+var my_JSON_object = JSON.parse(request.responseText);
+alert(my_JSON_object.album_001_info.description);
+*/
 
 // -------------------------
 // STAR - IMPLEMENT NEW FILE
 
 // retrieve the name of the html page that called this current script
 var callerPagePath = window.location.pathname;
-var callerPageName = callerPagePath.substring(callerPagePath.lastIndexOf('/') + 1);
+// only keep the last slash plus the file name and extension
+var callerPageName = callerPagePath.substring(callerPagePath.lastIndexOf('/'));
 alert(callerPageName);
 
-// retrieve list of images from the folder album
-//var fs = require('fs');
-//var files = fs.readdirSync('/albums/album_001/');
-//alert(files);
+// remove the extension
+callerPageName = callerPageName.replace(/\.[^/.]+$/, "")
+
+// build url of the corresponding json file
+var requestURL = './albums' + callerPageName + callerPageName + '.json';
+alert(requestURL);
+
+
+// create the XHR request
+var req = new XMLHttpRequest();
+req.responseType = 'json';
+req.open('GET', requestURL, true);
+req.onload = function() {
+    var jsonResponse = req.response;
+
+    // do something with jsonResponse
+    var title = jsonResponse.album_001_info.title;
+    var descr = jsonResponse.album_001_info.description;
+    var photoList = jsonResponse.album_001_info.photoList;
+
+    alert(title);
+    alert(descr);
+    alert(photoList);
+
+
+};
+req.send(null);
+
+
+
+/*
+req.addEventListener('readystatechange', function() { // On gère ici une requête asynchrone
+
+    if (req.readyState === XMLHttpRequest.DONE && req.status === 200) { // Si le fichier est chargé sans erreur
+
+        var pif = req.responseText;
+
+    }
+
+});
+*/
+
+/*
 
 // Try to retrieve album data from a json file
-var requestURL = 'albums/album_001/album_001.json';
+var requestURL = './albums/album_001/album_001.json';
 var request = new XMLHttpRequest();
 // Open json file
 request.open('GET', requestURL);
-// Retrieve data
-var superHeroesText = request.response;
 
-/*request.responseType = 'json';
-request.send();
+// Retrieve data
+// var superHeroesText = request.response;
+
+// request.responseType = 'json';
+request.send(null);
+
+//var dataRetrieved = JSON.parse(request.responseText);
+
+alert(request.responseText);
+
+// alert(superHeroesText);
 
 request.onload = function() {
     var superHeroes = request.response;
@@ -45,8 +103,9 @@ request.onload = function() {
 function populateHeader(jsonObj) {
     var myH1 = jsonObj['description'];
     alert(myH1);
-}*/
+}
 
+*/
 
 
 /*function readJSON(path) {
@@ -70,15 +129,8 @@ function populateHeader(jsonObj) {
 //var rData = JSON.parse('{"myparam": "myString"}');
 // var tData = JSON.parse("./albums/album_001/album_001.json");
 
-/*var request = new XMLHttpRequest();
-request.open("GET", "/albums/album_001/album_001.json", false);
-request.send(null)
-var my_JSON_object = JSON.parse(request.responseText);
-alert(my_JSON_object);*/
 
-
-
-var tData = JSON.parse(albumJsonData);
+//var tData = JSON.parse(albumJsonData);
 
 
 // END - IMPLEMENT NEW FILE
