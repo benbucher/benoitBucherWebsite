@@ -41,6 +41,8 @@ req.onload = function() {
     var descr = jsonResponse.album_info.description;
     var photoList = jsonResponse.album_info.photoList;
 
+    alert(descr);
+
     // update html content with data from JSON file
     document.querySelector('.photoAlbumTitle h2').innerHTML = title;
     document.querySelector('.photoAlbumTitle p').innerHTML = date;
@@ -51,13 +53,12 @@ req.onload = function() {
 
     // go through all the photos of the table
     for (var i = 0, c = photoList.length; i < c; i++) {
-        // build each picture
-        //alert(photoList[i]);
 
         // rebuild id tag for each photo number of the album
         var catAlbumAndPhotoNumber = albumNumber + '_photo_' + String(pad(i + 1, 3));
         //alert(catAlbumAndPhotoNumber);
 
+        // build each picture i
         var pictureString = '<img id="' + catAlbumAndPhotoNumber + '" src="albums/' + albumNumber + '/' + photoList[i] + '" alt="' + catAlbumAndPhotoNumber + '" loading="lazy"> \n';
         //alert(pictureString);
 
@@ -66,49 +67,26 @@ req.onload = function() {
 
     }
 
-    //alert(allPhotos);
-
     // add total string to the innerHtml after the end of the for loop
     document.querySelector('#albumPhotosContainer').innerHTML = allPhotos;
+    //alert(allPhotos);
 
-
-
-
-    // retrieve the list of all the img tags in the container #albumPhotosContainer
-    var imgTableList = document.querySelectorAll('#albumPhotosContainer img');
-
-    // get the album number from the first picture id name
-    var albumNumber = imgTableList[0].id.slice(0, -3); // remove the last three characters containing the photo number
+    // build album number plus photo prefix
+    albumNumber = albumNumber + '_photo_';
 
     // call the function to compute and apply margins
-    computeAndApplyMargins(albumNumber, imgTableList);
-
+    computeAndApplyMargins(albumNumber, photoList.length);
 
 };
 req.send(null);
 
 
 
-
-
-/*
-
-// retrieve the list of all the img tags in the container #albumPhotosContainer
-var imgTableList = document.querySelectorAll('#albumPhotosContainer img');
-
-// get the album number from the first picture id name
-var albumNumber = imgTableList[0].id.slice(0, -3); // remove the last three characters containing the photo number
-
-// call the function to compute and apply margins
-computeAndApplyMargins(albumNumber, imgTableList);
-
-*/
-
 // function to compute and apply margins for each picture in the html file
-function computeAndApplyMargins(albumNumber, imgTableList) {
+function computeAndApplyMargins(albumNumber, numberOfImg) {
 
     // go through the list of pictures of the album
-    for (var i = 0, c = imgTableList.length; i < c; i++) {
+    for (var i = 0, c = numberOfImg; i < c; i++) {
 
         // draw random width
         var width = getRandomSize(20, 95); // the width of the picture is between 20% and 95% of the container width
@@ -146,6 +124,23 @@ function pad(num, size) {
 }
 
 
+
+
+
+
+/*
+
+// retrieve the list of all the img tags in the container #albumPhotosContainer
+var imgTableList = document.querySelectorAll('#albumPhotosContainer img');
+var numberOfImg = imgTableList.length;
+
+// get the album number from the first picture id name
+var albumNumber = imgTableList[0].id.slice(0, -3); // remove the last three characters containing the photo number
+
+// call the function to compute and apply margins
+computeAndApplyMargins(albumNumber, numberOfImg);
+
+*/
 
 
 /*
