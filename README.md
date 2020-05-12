@@ -5,7 +5,7 @@
 
 This repository contains all the code of my personal website.
 
-It comes along with a server.js file to serve the websote.
+It comes along with a server.js file to serve the website.
 
 To visit the website:
 
