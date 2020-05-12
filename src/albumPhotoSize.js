@@ -11,18 +11,6 @@ This script will be called by each html album page to generate the width and mar
 
 
 
-/*
-var request = new XMLHttpRequest();
-request.open("GET", "/albums/album_001/album_001.json", false);
-request.send(null)
-var my_JSON_object = JSON.parse(request.responseText);
-alert(my_JSON_object.album_001_info.description);
-*/
-
-// -------------------------
-// STAR - IMPLEMENT NEW FILE
-
-
 // retrieve the name of the html page that called this current script
 var callerPagePath = window.location.pathname;
 // only keep the last slash plus the file name and extension
@@ -68,7 +56,7 @@ req.onload = function() {
 
         // rebuild id tag for each photo number of the album
         var catAlbumAndPhotoNumber = albumNumber + '_photo_' + String(pad(i + 1, 3));
-        alert(catAlbumAndPhotoNumber);
+        //alert(catAlbumAndPhotoNumber);
 
         var pictureString = '<img id="' + catAlbumAndPhotoNumber + '" src="albums/' + albumNumber + '/' + photoList[i] + '" alt="' + catAlbumAndPhotoNumber + '" loading="lazy"> \n';
         //alert(pictureString);
@@ -78,11 +66,10 @@ req.onload = function() {
 
     }
 
-    alert(allPhotos);
+    //alert(allPhotos);
 
     // add total string to the innerHtml after the end of the for loop
     document.querySelector('#albumPhotosContainer').innerHTML = allPhotos;
-
 
 
 
@@ -102,8 +89,6 @@ req.send(null);
 
 
 
-// END - IMPLEMENT NEW FILE
-// ------------------------
 
 
 /*
@@ -146,12 +131,6 @@ function computeAndApplyMargins(albumNumber, imgTableList) {
         // apply margins at the format margin = marginTop marginRight marginBottom marginLeft
         catAlbumAndPhotoNumber.style.margin = String(marginTop) + 'px ' + String(marginHorizontal * (1 - horizontalSplit)) + '% ' + String(marginBottom) + 'px ' + String(marginHorizontal * horizontalSplit) + '%';
 
-        /*
-	    catAlbumAndPhotoNumber.style.marginLeft = String(marginHorizontal * horizontalSplit) + '%';
-	    catAlbumAndPhotoNumber.style.marginRight = String(marginHorizontal * (1 - horizontalSplit)) + '%';
-		catAlbumAndPhotoNumber.style.marginTop = String(marginTop) + 'px';
-		catAlbumAndPhotoNumber.style.marginBottom = String(marginBottom) + 'px';
-		*/
     }
 }
 
@@ -169,90 +148,10 @@ function pad(num, size) {
 
 
 
-
-
-
-
-
-
-// OLD SCRIPTS USED TO TRY IMPLEM
-// ------------------------------
-
-
-
 /*
-req.addEventListener('readystatechange', function() { // On gère ici une requête asynchrone
-
-    if (req.readyState === XMLHttpRequest.DONE && req.status === 200) { // Si le fichier est chargé sans erreur
-
-        var pif = req.responseText;
-
-    }
-
-});
-*/
-
-/*
-
-// Try to retrieve album data from a json file
-var requestURL = './albums/album_001/album_001.json';
 var request = new XMLHttpRequest();
-// Open json file
-request.open('GET', requestURL);
-
-// Retrieve data
-// var superHeroesText = request.response;
-
-// request.responseType = 'json';
-request.send(null);
-
-//var dataRetrieved = JSON.parse(request.responseText);
-
-alert(request.responseText);
-
-// alert(superHeroesText);
-
-request.onload = function() {
-    var superHeroes = request.response;
-    populateHeader(superHeroes);
-}
-
-function populateHeader(jsonObj) {
-    var myH1 = jsonObj['description'];
-    alert(myH1);
-}
-
-*/
-
-
-/*function readJSON(path) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', path, true);
-    xhr.responseType = 'json';
-    xhr.onload = function(e) {
-        if (this.status == 200) {
-            var file = new File([this.response], 'temp');
-            var fileReader = new FileReader();
-            fileReader.addEventListener('load', function() {
-                //do stuff with fileReader.result
-
-            });
-            fileReader.readAsText(file);
-        }
-    }
-    xhr.send();
-}*/
-
-//var rData = JSON.parse('{"myparam": "myString"}');
-// var tData = JSON.parse("./albums/album_001/album_001.json");
-
-
-//var tData = JSON.parse(albumJsonData);
-
-
-/*
-// other method
-var imgToAdd = document.createElement("img");
-imgToAdd.src = "albums/album_002/P2380071.jpg";
-document.querySelector('#albumPhotosContainer').appendChild(imgToAdd);
+request.open("GET", "/albums/album_001/album_001.json", false);
+request.send(null)
+var my_JSON_object = JSON.parse(request.responseText);
+alert(my_JSON_object.album_001_info.description);
 */
