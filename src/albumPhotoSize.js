@@ -41,8 +41,6 @@ req.onload = function() {
     var descr = jsonResponse.album_info.description;
     var photoList = jsonResponse.album_info.photoList;
 
-    alert(descr);
-
     // update html content with data from JSON file
     document.querySelector('.photoAlbumTitle h2').innerHTML = title;
     document.querySelector('.photoAlbumTitle p').innerHTML = date;

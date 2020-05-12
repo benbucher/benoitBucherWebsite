@@ -1,0 +1,14 @@
+{
+    "album_info":
+    {
+        "number": "album_006",
+        "title": "Album six title",
+        "date": "2020.02.21",
+        "description": "Album six description. Tristique nullam tellus ultrices diam pellentesque potenti commodo. Auctor aenean risus semper et pharetra blandit. Quam euismod integer augue commodo consectetur. Magna praesent malesuada vitae turpis. Sed sollicitudin integer arcu a et et feugiat amet aliquam. Aliquet non sem metus, lacus sit arcu.",
+        "photoList": [
+            "P2330299.jpg",
+            "P2350170.jpg",
+            "P2340337.jpg"
+        ]
+    }
+}

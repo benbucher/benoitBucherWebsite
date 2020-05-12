@@ -2,9 +2,9 @@
     "album_info":
     {
         "number": "album_001",
-        "title": "Album one title JSON",
+        "title": "Album one title",
         "date": "2020.02.21",
-        "description": "Album one description JSON. Tristique nullam tellus ultrices diam pellentesque potenti commodo. Auctor aenean risus semper et pharetra blandit. Quam euismod integer augue commodo consectetur. Magna praesent malesuada vitae turpis. Sed sollicitudin integer arcu a et et feugiat amet aliquam. Aliquet non sem metus, lacus sit arcu.",
+        "description": "Album one description. Tristique nullam tellus ultrices diam pellentesque potenti commodo. Auctor aenean risus semper et pharetra blandit. Quam euismod integer augue commodo consectetur. Magna praesent malesuada vitae turpis. Sed sollicitudin integer arcu a et et feugiat amet aliquam. Aliquet non sem metus, lacus sit arcu.",
         "photoList": [
             "P2320704.jpg",
             "P2470011.jpg",
