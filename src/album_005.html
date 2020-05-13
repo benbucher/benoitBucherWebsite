@@ -52,17 +52,51 @@
                 <div class="photoAlbumTitle">
                     <h2 class="subtitleFont">
                         <!-- album title added here automatically by the javascrip -->
+                        Album five title
                     </h2>
                     <p class="tertiaryFont">
                         <!-- album date added here automatically by the javascrip -->
+                        date
                     </p>
                 </div>
                 <p class="textFont">
                     <!-- album description added here automatically by the javascrip -->
+                    Albume five is used to test the lightbox before extending it to the other albums and making it automatic.
                 </p>
             </section>
             <div id="albumPhotosContainer">
-                <!-- pictures are added here automatically by the javascrip -->
+                <!-- Images used to open the lightbox -->
+                <img src="albums/album_005/P2330299.jpg" alt="album_005_photo_001" loading="lazy" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                <img src="albums/album_005/P2350170.jpg" alt="album_005_photo_002" loading="lazy" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                <img src="albums/album_005/P2470981.jpg" alt="album_005_photo_003" loading="lazy" onclick="openModal();currentSlide(3)" class="hover-shadow">
+                <img src="albums/album_005/P2340337.jpg" alt="album_005_photo_004" loading="lazy" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                <!-- The Modal/Lightbox -->
+                <div id="myModal" class="modal">
+                    <!-- Close button -->
+                    <div class="close cursor" onclick="closeModal()"></div>
+                    <!-- Next/Previous buttons -->
+                    <div class="prev" onclick="plusSlides(-1)"></div>
+                    <div class="next" onclick="plusSlides(1)"></div>
+                    <!-- Pictures -->
+                    <div class="modal-content">
+                        <div class="mySlides">
+                            <div class="numbertext subtitleFont">1/4</div>
+                            <img src="albums/album_005/P2330299.jpg">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext subtitleFont">2/4</div>
+                            <img src="albums/album_005/P2350170.jpg">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext subtitleFont">3/4</div>
+                            <img src="albums/album_005/P2470981.jpg">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext subtitleFont">4/4</div>
+                            <img src="albums/album_005/P2340337.jpg">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -70,7 +104,9 @@
         <p class="tertiaryFont">copyright © 2020 benoit bucher all rights reserved</p>
     </footer>
     <!-- Add the link to the javascript file to compute image size and margins, it is to be called after the albumPhotosContainer -->
-    <script src="albumPhotoSize.js"></script>
+    <!-- <script src="albumPhotoSize.js"></script> -->
+    <!-- Call script for the lightbox -->
+    <script src="lightbox.js"></script>
 </body>
 
 </html>
