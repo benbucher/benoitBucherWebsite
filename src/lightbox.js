@@ -39,3 +39,30 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "block";
 }
+
+
+// Add controls for the modal to go left and right and echap with the keyboard as well
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+    e = e || window.event;
+    if (e.keyCode == '37') {
+        // left arrow
+        if (document.getElementById("myModal").style.display == "block") {
+            // the modal is open so go left
+            plusSlides(-1);
+        }
+    } else if (e.keyCode == '39') {
+        // right arrow
+        if (document.getElementById("myModal").style.display == "block") {
+            // the modal is open so go right
+            plusSlides(1);
+        }
+    } else if (e.keyCode == '27') {
+        // echap
+        if (document.getElementById("myModal").style.display == "block") {
+            // the modal is open so close it
+            closeModal();
+        }
+    }
+}

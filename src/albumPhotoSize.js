@@ -57,12 +57,14 @@ req.onload = function() {
         var catAlbumAndPhotoNumber = albumNumber + '_photo_' + String(pad(i + 1, 3));
         //alert(catAlbumAndPhotoNumber);
 
+        // build src and alt tag
+        var srcAndAlt = 'src="albums/' + albumNumber + '/' + photoList[i] + '" alt="' + catAlbumAndPhotoNumber + '"';
+
         // build each picture i
-        var pictureString = '<img id="' + catAlbumAndPhotoNumber + '" src="albums/' + albumNumber + '/' + photoList[i] + '" alt="' + catAlbumAndPhotoNumber + '" loading="lazy"' + ' onclick="openModal();currentSlide(' + eval(i + 1) + ')" class="hover-shadow"' + '> \n';
-        //alert(pictureString);
+        var pictureString = '<img id="' + catAlbumAndPhotoNumber + '" ' + srcAndAlt + ' loading="lazy"' + ' onclick="openModal();currentSlide(' + eval(i + 1) + ')" class="hover-shadow"' + '> \n';
 
         // build each modal picture i
-        var modalPictureString = '<div class="mySlides"> \n <div class="numbertext subtitleFont">' + eval(i + 1) + '/' + photoList.length + '</div> \n <img src="albums/' + albumNumber + '/' + photoList[i] + '"> \n </div> \n';
+        var modalPictureString = '<div class="mySlides"> \n <div class="numbertext subtitleFont">' + eval(i + 1) + '/' + photoList.length + '</div> \n <img ' + srcAndAlt + '> \n </div> \n';
 
         // concatenate the string of all pictures
         allPhotos = allPhotos + pictureString;
@@ -82,7 +84,6 @@ req.onload = function() {
     document.querySelector('#albumPhotosContainer').innerHTML = allHtml;
 
 
-
     // build album number plus photo prefix
     albumNumber = albumNumber + '_photo_';
 
@@ -91,6 +92,7 @@ req.onload = function() {
 
 };
 req.send(null);
+
 
 
 
@@ -123,7 +125,6 @@ function computeAndApplyMargins(albumNumber, numberOfImg) {
 
     }
 }
-
 
 // random draw function
 function getRandomSize(min, max) {
