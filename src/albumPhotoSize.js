@@ -48,6 +48,7 @@ req.onload = function() {
 
     // initialize the final HTML text to insert for the photos
     var allPhotos = "";
+    var allModalPhotos = "";
 
     // go through all the photos of the table
     for (var i = 0, c = photoList.length; i < c; i++) {
@@ -57,17 +58,30 @@ req.onload = function() {
         //alert(catAlbumAndPhotoNumber);
 
         // build each picture i
-        var pictureString = '<img id="' + catAlbumAndPhotoNumber + '" src="albums/' + albumNumber + '/' + photoList[i] + '" alt="' + catAlbumAndPhotoNumber + '" loading="lazy"> \n';
+        var pictureString = '<img id="' + catAlbumAndPhotoNumber + '" src="albums/' + albumNumber + '/' + photoList[i] + '" alt="' + catAlbumAndPhotoNumber + '" loading="lazy"' + ' onclick="openModal();currentSlide(' + eval(i + 1) + ')" class="hover-shadow"' + '> \n';
         //alert(pictureString);
+
+        // build each modal picture i
+        var modalPictureString = '<div class="mySlides"> \n <div class="numbertext subtitleFont">' + eval(i + 1) + '/' + photoList.length + '</div> \n <img src="albums/' + albumNumber + '/' + photoList[i] + '"> \n </div> \n';
 
         // concatenate the string of all pictures
         allPhotos = allPhotos + pictureString;
+        allModalPhotos = allModalPhotos + modalPictureString;
 
     }
 
+    // build the fixed html parts to add
+    var fixedPart1 = '<div id="myModal" class="modal"> \n <div class="close cursor" onclick="closeModal()"></div> \n <div class="prev" onclick="plusSlides(-1)"></div> \n <div class="next" onclick="plusSlides(1)"></div> \n <div class="modal-content"> \n'
+    var fixedPart2 = '</div> \n </div> \n';
+
+    // concatenate the whole html part to add
+    var allHtml = allPhotos + fixedPart1 + allModalPhotos + fixedPart2;
+    //alert(allHtml);
+
     // add total string to the innerHtml after the end of the for loop
-    document.querySelector('#albumPhotosContainer').innerHTML = allPhotos;
-    //alert(allPhotos);
+    document.querySelector('#albumPhotosContainer').innerHTML = allHtml;
+
+
 
     // build album number plus photo prefix
     albumNumber = albumNumber + '_photo_';
