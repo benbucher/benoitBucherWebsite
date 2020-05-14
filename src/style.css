@@ -698,30 +698,24 @@ footer p {
 .modal {
     display: none;
     position: fixed;
-    /* z-index MODIF by ben to hide header and all the page */
     z-index: 9900;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    /*overflow: auto;*/
-    background-color: purple;
+    background-color: white;
 }
 
 /* Modal Content */
 .modal-content {
     position: relative;
-    background-color: yellow;
-    /*margin: 80px;*/
-    /*auto;*/
-    /*padding: 0;*/
+    background-color: white;
     width: 100%;
     height: 100%;
 }
 
 /* The Close Button */
 .close {
-
     position: absolute;
     right: 24px;
     top: 24px;
@@ -732,29 +726,17 @@ footer p {
     background-size: contain;
 }
 
-.close:hover,
-.close:focus {
-    color: #999;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 /* Hide the slides by default */
 .mySlides {
     display: none;
-    /*width: 100%;
-    height: 100%;*/
+    /* add 80px margin all around */
     margin: 80px;
+    /* height and width are 100% minus margins */
     width: calc(100% - 160px);
     height: calc(100% - 160px);
 }
 
 .mySlides img {
-    /*width: 100%;*/
-    /*margin-top: 40px;
-    margin-bottom: 24px;
-    height: calc(100% - 40px - 24px);
-    width: 100%;*/
     display: block;
 
     max-height: 100%;
@@ -762,42 +744,48 @@ footer p {
 
     object-fit: contain;
     object-position: center;
-
-
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
-    z-index: 9999;
-    cursor: pointer;
+/* Previous buttons */
+.prev {
     position: absolute;
-    top: calc(50% - 58px/2);
-    width: auto;
-    padding: 16px;
+    z-index: 9990;
+
+    left: 24px;
+    top: calc(50% - 16px);
+    width: 32px;
+    height: 32px;
+    padding: 4px;
 
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
     user-select: none;
     -webkit-user-select: none;
 
     background-image: url("logo/button_left.svg");
-    background-size: contain;
+    background-size: 24px 24px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-/* Position the "next button" to the right */
+/* Next button */
 .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+    position: absolute;
+    z-index: 9990;
+
+    right: 24px;
+    top: calc(50% - 16px);
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+
+    transition: 0.6s ease;
+    user-select: none;
+    -webkit-user-select: none;
 
     background-image: url("logo/button_right.svg");
-    background-size: contain;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-size: 24px 24px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Number text (1/3 etc) */
@@ -822,8 +810,23 @@ img.hover-shadow {
     transition: 0.3s;
 }
 
+.close:hover,
+.close:focus {
+    cursor: pointer;
+    /*right: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;*/
+}
+
+.prev:hover,
+.next:hover {
+    cursor: pointer;
+    /*background-color: rgba(0, 0, 0, 0.8);*/
+}
+
 .hover-shadow:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 }
 
 
