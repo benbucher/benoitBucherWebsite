@@ -283,11 +283,9 @@ blockquote p {
     flex-direction: column;
     /* put the title and date on top and the picture bellow */
 
-    min-width: 248px;
-    /* WARNING: this has been added for title and date of the album not to mess up, but it also has the consequence to mess up with the flex wrap of the albums, so it can be removed if the flex wrapping is not handled properly later with media queries for instance */
     width: calc((100% - 4 * 24px) / 4);
-    /* four blockes per row in desktop version */
-    height: 30vh;
+    /* four blocks per row in desktop version */
+    height: 16vw;
     /*padding-bottom: 60%;*/
     margin-top: 40px;
     /*24px;*/
@@ -738,6 +736,8 @@ footer p {
 
 .mySlides img {
     display: block;
+    /* use important here even though it is bad practice as it is required to remove the margin added from albumPhotosContainer img, that is used in case javascript does not work */
+    margin-bottom: 0px !important;
 
     max-height: 100%;
     max-width: 100%;
@@ -753,8 +753,8 @@ footer p {
 
     left: 24px;
     top: calc(50% - 16px);
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     padding: 4px;
 
     transition: 0.6s ease;
@@ -774,8 +774,8 @@ footer p {
 
     right: 24px;
     top: calc(50% - 16px);
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     padding: 4px;
 
     transition: 0.6s ease;
@@ -833,6 +833,93 @@ img.hover-shadow {
 
 
 
+
+/* --- MEDIA QUERY FOR RESPONSIVE --- */
+/* ---------------------------------- */
+
+
+/* default version is desktop */
+
+
+/* tablet version */
+@media only screen and (min-width: 768px) and (max-width: 1199.99px) {
+
+    /* OK home page */
+    /* the margins of the quotes can remain the same and the minimum height of the homepage is also good */
+    /* the minimum height of 400px for the homepage pic can be kept as the screen is much likely bigger since its width is minimum 768px and we don't want the pic to be too small anyway */
+
+
+    /* OK profile page */
+    /* main content width is reduced to 720px and font size for the quote is set to a smaller value to fit on two line only */
+
+    #profilepageMain {
+        width: 720px;
+    }
+
+    .profilePic {
+        width: 348px;
+        /* set width to half of the parent minus centre margin of 24px */
+    }
+
+    #aboutMain section {
+        width: 348px;
+        /* set width to half of the parent minus centre margin of 24px */
+    }
+
+    .bigQuoteFont {
+        /* make the big quote a bit smaller for this screen size */
+        font-size: 42px;
+    }
+
+
+    /* OK photo page */
+    /* album vignettes are set to be three per columb instead of four for the desktop version */
+
+    .photoAlbumItem {
+        width: calc((100% - 3 * 24px) / 3);
+        /* three blocks per row in tablet version */
+        height: 18vw;
+        /* aspect ratio is a bit increased for tablet version */
+    }
+
+
+    /* OK albumXXX page */
+    /* the margins and size of elements seems ok even when the screen size is this small */
+
+
+    /* OK contact page remains the same */
+    /* the content size can remain the same and the minimum margins ensures a nice resizing behaviour for the tablet and the desktop version */
+
+}
+
+/* mobile version */
+@media only screen and (min-width: 480px) and (max-width: 767.99px) {
+    /* TODO home page */
+
+    /* TODO profile page */
+
+    /* TODO photo page */
+
+    /* TODO albumXXX page */
+
+    /* TODO contact page */
+
+}
+
+/* small mobile version */
+@media only screen and (max-width: 479.99px) {
+    /* TODO home page */
+
+    /* TODO profile page */
+
+    /* TODO photo page */
+
+    /* TODO albumXXX page */
+
+    /* TODO contact page */
+
+
+}
 
 
 
