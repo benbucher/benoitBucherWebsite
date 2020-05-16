@@ -951,7 +951,7 @@ img.hover-shadow {
         /* set width to half of the parent minus centre margin of 24px */
     }
 
-    .bigQuoteFont {
+    #profilepageMain p.bigQuoteFont {
         /* make the big quote a bit smaller for this screen size */
         font-size: 42px;
     }
@@ -993,8 +993,13 @@ img.hover-shadow {
     }
 
 
+    /* OK home page */
+    /* category items are added to go to all the pages of the website and blockquote margins and font size are reduced to fit better */
 
-    /* TODO home page */
+    #homepagePic {
+        margin-top: 112px;
+        /* reduce top margin */
+    }
 
     #categoriesForMobile {
         /* display home category items */
@@ -1009,12 +1014,56 @@ img.hover-shadow {
         /* top right bottom left */
     }
 
-    .quoteFont {
+    #homepagePic blockquote.quoteFont {
         /* make the quote a bit smaller for this screen size */
         font-size: 16px;
     }
 
-    /* TODO profile page */
+
+    /* OK profile page */
+    /* the whole layout is reorganized for the mobile version along with margins and size */
+
+    #profilepageMain {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 112px 0px 24px 0px;
+        width: 100%;
+    }
+
+    #profilepageMain h1 {
+        margin: 0px 0px 24px 24px;
+        width: 100%;
+        text-align: left;
+    }
+
+    #aboutMain {
+        margin-top: 24px;
+        /* smaller margin between picture and description below */
+    }
+
+    #profilepageMain p.bigQuoteFont {
+        margin-left: 24px;
+        width: calc((100% - 3*24px)/2);
+        /* set width to half of the parent minus margins */
+        font-size: 30px;
+        line-height: 150%;
+        /* make the quote a bit smaller for this screen size */
+    }
+
+    .profilePic.displayForMobile {
+        margin-left: 24px;
+        width: calc((100% - 3*24px)/2);
+        /* set width to half of the parent minus margins */
+        min-height: 200px;
+        /* set a minimum height for the picture */
+    }
+
+    #aboutMain section {
+        width: 100%;
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
 
     /* OK photo page */
     /* album vignettes are set to be two per column instead of four for the desktop version */
@@ -1051,7 +1100,6 @@ img.hover-shadow {
     }
 
 
-
     /* OK contact page */
     /* margins are updated for the text to fill the whole space and start at the top */
 
@@ -1065,7 +1113,6 @@ img.hover-shadow {
         margin-left: 24px;
         /* content is centered horizontally with flex, and minimum 24px margin is ensured */
         margin-right: 24px;
-
     }
 
     #contactpageMain section {
@@ -1085,6 +1132,8 @@ img.hover-shadow {
 /* small mobile version */
 @media only screen and (max-width: 479.99px) {
 
+    /* put quote and picture on full width for profile page  and same for home page categories */
+
     /* TODO home page */
 
     /* TODO profile page */
@@ -1100,6 +1149,24 @@ img.hover-shadow {
 
 
 
+/* rules specific to touch screens */
+@media (hover: none) {
+
+    .mySlides {
+        /* reduce margins on left and right from 80px to 24px */
+        margin-left: 24px;
+        margin-right: 24px;
+        /* update width for new margin */
+        width: calc(100% - 48px);
+    }
+
+    .next,
+    .prev {
+        /* remove next and previous buttons */
+        display: none;
+    }
+
+}
 
 
 
