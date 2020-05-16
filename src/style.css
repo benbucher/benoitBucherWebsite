@@ -883,9 +883,9 @@ footer p {
     /*position: absolute;*/
     position: fixed;
 
-    width: 320px;
+    width: 120px;
     height: 26px;
-    left: calc(50% - 320px/2);
+    left: calc(50% - 120px/2);
     bottom: 27px;
     text-align: center;
 
@@ -1112,6 +1112,24 @@ img.hover-shadow {
     #albumPhotosContainer {
         margin-top: 48px;
         /* first picture is at 48px (smaller margin for mobile version) from the bottom of the album description */
+    }
+
+    .mySlides {
+        /* reduce margins on left and right from 80px to 24px */
+        margin-left: 24px;
+        margin-right: 24px;
+        /* update width for new margin */
+        width: calc(100% - 48px);
+    }
+
+    .next {
+        top: calc(100% - 40px - 32px/2);
+        right: 80px;
+    }
+
+    .prev {
+        top: calc(100% - 40px - 32px/2);
+        left: 80px;
     }
 
 
