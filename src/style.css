@@ -1133,17 +1133,43 @@ img.hover-shadow {
 @media only screen and (max-width: 479.99px) {
 
     /* put quote and picture on full width for profile page  and same for home page categories */
+    /* reduce margins in the albumXXX for mobile version */
 
-    /* TODO home page */
+    /* OK home page */
 
-    /* TODO profile page */
+    .homeCategoryItemFull,
+    .homeCategoryItemHalf {
+        min-width: calc(100% - 2*24px);
+        /* full width for all items */
+        height: 65vw;
+        /* height to have fixed aspect ratio */
+    }
 
-    /* TODO photo page */
 
-    /* TODO albumXXX page */
+    /* OK profile page */
 
-    /* TODO contact page */
+    #profilepageMain p.bigQuoteFont {
+        font-size: 22.6px;
+        /* make the quote a bit smaller for this screen size */
+    }
 
+
+    /* OK photo page */
+
+    .photoAlbumItem {
+        width: calc(100% - 24px);
+        /* two blocks per row in mobile version */
+        height: 42vw;
+        /* aspect ratio is a bit increased for one column version */
+    }
+
+
+    /* OK albumXXX page */
+    /* same layout can be kept */
+
+
+    /* OK contact page */
+    /* same layout can be kept */
 
 }
 
@@ -1170,28 +1196,7 @@ img.hover-shadow {
 
 
 
-/*.cover {
-    flex: 1;
-    width: 100%;
-    object-fit: cover;
-}*/
 
-/*#mainWrapper
-{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-}*/
 
-/* #photopageCore
-{
-    display: flex;
-    flex-direction: column;
-
-    min-height: 100vh;
-
-    background-color: yellow;
-}*/
 
 }
