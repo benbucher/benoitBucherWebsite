@@ -88,7 +88,8 @@ header {
 
 /* Logo vector */
 
-#menuLogo {
+#menuLogo,
+#menuLogo2 {
     position: absolute;
     width: 48px;
     height: 48px;
@@ -99,6 +100,20 @@ header {
 
     background-image: url("logo/logoVector.svg");
     background-size: contain;
+}
+
+#burgerMenu {
+    /* burger menu for MOBILE version */
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    right: 8px;
+    top: 8px;
+
+    background-image: url("logo/menuBurger.svg");
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #menuTitle {
@@ -536,6 +551,74 @@ footer p {
 
 
 
+/* define default content to display for DESKTOP version */
+.displayForMobile {
+    /* hide the MOBILE version title */
+    display: none;
+}
+
+/* define default content for MOBILE version */
+#menuLogo2 {
+    top: 120px;
+    left: calc(50vw - 88px/2);
+    width: 88px;
+    height: 88px;
+}
+
+.navMobileLayout {
+    flex-direction: column;
+    /* center items horizontally */
+    align-items: center;
+
+    top: 280px;
+    left: calc(50vw - 140px/2);
+    height: 260px;
+    width: 140px;
+    padding-bottom: 120px;
+}
+
+.homeCategoryItemHalf,
+.homeCategoryItemFull {
+    display: flex;
+    flex-direction: column;
+    /* put the title on top and the picture bellow */
+    min-width: calc((100% - 3*24px)/2);
+    /* half widht for half items */
+    height: 39vw;
+    /* height to have fixed aspect ratio */
+    margin: 24px 0px 24px 24px;
+    text-decoration: none;
+}
+
+.homeCategoryItemFull {
+    min-width: calc(100% - 2*24px);
+    /* full width for full item */
+}
+
+.homeCategoryItemHalf h1,
+.homeCategoryItemFull h1 {
+    margin: 0px 0px 16px 0px;
+    height: 38px;
+    text-align: left;
+}
+
+.homeCategoryItemHalf img,
+.homeCategoryItemFull img {
+    display: block;
+    margin: 0px;
+    height: calc(100% - 16px - 38px);
+    /* set the size 100% minus the title height and the margin */
+    width: 100%;
+    /* set size to the same as the parent one for the picture to fill the whole container */
+    object-fit: cover;
+    /* fill all the available space without change in aspect ratio */
+    object-position: center;
+}
+
+
+
+
+
 
 /* --- FONTS --- */
 /* ------------- */
@@ -715,8 +798,10 @@ footer p {
 /* The Close Button */
 .close {
     position: absolute;
-    right: 24px;
-    top: 24px;
+    /*right: 24px;
+    top: 24px;*/
+    right: 16px;
+    top: 16px;
     width: 32px;
     height: 32px;
 
@@ -751,7 +836,7 @@ footer p {
     position: absolute;
     z-index: 9990;
 
-    left: 24px;
+    left: 16px;
     top: calc(50% - 16px);
     width: 24px;
     height: 24px;
@@ -772,7 +857,7 @@ footer p {
     position: absolute;
     z-index: 9990;
 
-    right: 24px;
+    right: 16px;
     top: calc(50% - 16px);
     width: 24px;
     height: 24px;
@@ -873,7 +958,7 @@ img.hover-shadow {
 
 
     /* OK photo page */
-    /* album vignettes are set to be three per columb instead of four for the desktop version */
+    /* album vignettes are set to be three per column instead of four for the desktop version */
 
     .photoAlbumItem {
         width: calc((100% - 3 * 24px) / 3);
@@ -893,21 +978,113 @@ img.hover-shadow {
 }
 
 /* mobile version */
-@media only screen and (min-width: 480px) and (max-width: 767.99px) {
+/*@media only screen and (min-width: 480px) and (max-width: 767.99px) {*/
+@media only screen and (max-width: 767.99px) {
+
+    /* Applicable to all pages */
+    .displayForDesktop {
+        /* hide the DESKTOP version */
+        display: none;
+    }
+
+    .displayForMobile {
+        /* show the MOBILE version */
+        display: block;
+    }
+
+
+
     /* TODO home page */
+
+    #categoriesForMobile {
+        /* display home category items */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* put home category item one after the other */
+    }
+
+    blockquote p {
+        margin: 52px 24px 24px 24px;
+        /* top right bottom left */
+    }
+
+    .quoteFont {
+        /* make the quote a bit smaller for this screen size */
+        font-size: 16px;
+    }
 
     /* TODO profile page */
 
-    /* TODO photo page */
+    /* OK photo page */
+    /* album vignettes are set to be two per column instead of four for the desktop version */
 
-    /* TODO albumXXX page */
+    #photopageAlbum {
+        margin-top: calc(64px + 48px - 40px);
+        /* 48px margin with header (substract the 40px margin added per each album on top) */
+    }
 
-    /* TODO contact page */
+    .photoAlbumItem {
+        width: calc((100% - 2 * 24px) / 2);
+        /* two blocks per row in mobile version */
+        height: 28vw;
+        /* aspect ratio is a bit increased for mobile version */
+    }
+
+
+    /* OK albumXXX page */
+    /* margins are updated and album description widht increased to fill all the space */
+
+    #album000page {
+        margin-top: 112px;
+        /* 48px margin with header */
+    }
+
+    #album000page section {
+        width: 100%;
+        /* have the description fill all the space for the */
+    }
+
+    #albumPhotosContainer {
+        margin-top: 48px;
+        /* first picture is at 48px (smaller margin for mobile version) from the bottom of the album description */
+    }
+
+
+
+    /* OK contact page */
+    /* margins are updated for the text to fill the whole space and start at the top */
+
+    #contactpageMain {
+        justify-content: flex-start;
+        /* the content starts at the top vertically */
+        margin-top: 112px;
+        /* 48px margin with the header */
+        margin-bottom: 48px;
+        /* ensure minimum margin with the footer */
+        margin-left: 24px;
+        /* content is centered horizontally with flex, and minimum 24px margin is ensured */
+        margin-right: 24px;
+
+    }
+
+    #contactpageMain section {
+        width: 100%;
+        /* fill all the available space */
+    }
+
+    #contactpageMain h1 {
+        margin: 0px;
+        margin-bottom: 24px;
+        /* margin between title and the text bellow set to 24px */
+    }
+
 
 }
 
 /* small mobile version */
 @media only screen and (max-width: 479.99px) {
+
     /* TODO home page */
 
     /* TODO profile page */
