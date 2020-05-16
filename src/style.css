@@ -8,6 +8,11 @@ Description: this file is the CSS style file called in my HTML file
 */
 
 
+* {
+    /* set scrollbar width to be thin */
+    scrollbar-width: thin;
+}
+
 
 /* ---- BODY ---- */
 /* -------------- */
@@ -967,6 +972,11 @@ img.hover-shadow {
         /* aspect ratio is a bit increased for tablet version */
     }
 
+    .photoAlbumItem .photoAlbumTitle p.tertiaryFont {
+        /* hide date from album vignette for tablet screen and below */
+        display: none;
+    }
+
 
     /* OK albumXXX page */
     /* the margins and size of elements seems ok even when the screen size is this small */
@@ -1078,6 +1088,11 @@ img.hover-shadow {
         /* two blocks per row in mobile version */
         height: 28vw;
         /* aspect ratio is a bit increased for mobile version */
+    }
+
+    .photoAlbumItem .photoAlbumTitle p.tertiaryFont {
+        /* hide date from album vignette for tablet screen and below */
+        display: none;
     }
 
 

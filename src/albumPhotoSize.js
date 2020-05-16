@@ -73,7 +73,7 @@ req.onload = function() {
     }
 
     // build the fixed html parts to add
-    var fixedPart1 = '<div id="myModal" class="modal"> \n <div class="close cursor" onclick="closeModal()"></div> \n <div class="prev" onclick="plusSlides(-1)"></div> \n <div class="next" onclick="plusSlides(1)"></div> \n <div class="modal-content"> \n'
+    var fixedPart1 = '<div id="myModal" class="modal"> \n <div class="close" onclick="closeModal()"></div> \n <div class="prev" onclick="plusSlides(-1)"></div> \n <div class="next" onclick="plusSlides(1)"></div> \n <div class="modal-content"> \n'
     var fixedPart2 = '</div> \n </div> \n';
 
     // concatenate the whole html part to add
