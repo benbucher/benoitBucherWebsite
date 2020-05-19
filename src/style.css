@@ -89,12 +89,13 @@ header {
     left: 8px;
     /*16px;*/
     top: 8px;
+    /* set zindex above content and below mobile menu when it deploys */
+    z-index: 8500;
 }
 
 /* Logo vector */
 
-#menuLogo,
-#menuLogo2 {
+#menuLogo {
     position: absolute;
     width: 48px;
     height: 48px;
@@ -107,8 +108,10 @@ header {
     background-size: contain;
 }
 
-#burgerMenu {
+.menuCategory #burgerMenu {
     /* burger menu for MOBILE version */
+    /* when in desktop version, hide the burger icon */
+    display: none;
     position: absolute;
     width: 48px;
     height: 48px;
@@ -562,26 +565,6 @@ footer p {
     display: none;
 }
 
-/* define default content for MOBILE version */
-#menuLogo2 {
-    top: 120px;
-    left: calc(50vw - 88px/2);
-    width: 88px;
-    height: 88px;
-}
-
-.navMobileLayout {
-    flex-direction: column;
-    /* center items horizontally */
-    align-items: center;
-
-    top: 280px;
-    left: calc(50vw - 140px/2);
-    height: 260px;
-    width: 140px;
-    padding-bottom: 120px;
-}
-
 .homeCategoryItemHalf,
 .homeCategoryItemFull {
     display: flex;
@@ -992,6 +975,7 @@ img.hover-shadow {
 @media only screen and (max-width: 767.99px) {
 
     /* Applicable to all pages */
+
     .displayForDesktop {
         /* hide the DESKTOP version */
         display: none;
@@ -1000,6 +984,66 @@ img.hover-shadow {
     .displayForMobile {
         /* show the MOBILE version */
         display: block;
+    }
+
+    /* MOBILE MENU setup */
+
+    .menuCategory {
+        /* reposition menuCategory to have the burger menu at appropriate spot */
+        top: 0px;
+        right: 0px;
+        /* same size as header */
+        height: 100%;
+        width: 100%;
+        /* set zindex below the logo on the left of the header */
+        z-index: 8000;
+    }
+
+    /* For the mobile versiob hide all the menu categories except for the burger link */
+    .menuCategory a {
+        display: none;
+    }
+
+    .menuCategory #burgerMenu {
+        display: block;
+        /* remove padding inherited from nav a */
+        padding: 0;
+    }
+
+    /* The .responsive class is added to the menuCategory with JavaScript when the user clicks on the burger */
+    /* This class makes the menuCategory look good on small screens (display the links vertically instead of horizontally) */
+    .menuCategory.responsive {
+        /* size of menuCategory is updated for the responsive version */
+        height: auto;
+        width: auto;
+        /* responsive menu is in column */
+        flex-direction: column;
+        justify-content: flex-start;
+        /* set white background and drop shadow */
+        background-color: white;
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.23);
+        /* set zindex above the logo on the left of the header when mobile menu is open */
+        z-index: 8600;
+    }
+
+    .menuCategory.responsive a {
+        display: block;
+        text-align: left;
+        margin-bottom: 16px;
+        margin-right: calc(20px + 56px);
+        margin-left: 20px;
+    }
+
+    .menuCategory.responsive a:first-child {
+        /* first link must have an additionnal top margin to account for header height */
+        margin-top: calc(64px + 16px);
+    }
+
+    .menuCategory.responsive #burgerMenu {
+        /* remove margins that are inherited from the a tag */
+        margin: 0px;
+        /* display close button when responsive classe is activated */
+        background-image: url("logo/button_close.svg");
     }
 
 
@@ -1226,6 +1270,8 @@ img.hover-shadow {
     }
 
 }
+
+
 
 
 

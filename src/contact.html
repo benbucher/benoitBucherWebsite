@@ -36,13 +36,13 @@
             </div>
         </a>
         <!-- right part of the fixed bar with menu categories -->
-        <nav class="displayForDesktop">
+        <nav class="menuCategory" id="myMenu">
             <a href="index.html" class="textLightFont">HOME</a>
             <a href="profile.html" class="textLightFont">PROFILE</a>
             <a href="photo.html" class="textLightFont">PHOTO</a>
             <a href="contact.html" class="textLightFont curentPageMenu">CONTACT</a>
+            <a href="javascript:void(0);" id="burgerMenu" onclick="showMobileMenu()"> </a>
         </nav>
-        <a href="menuMobile.html" id="burgerMenu" class="displayForMobile"></a>
     </header>
     <!-- drop shadow for the header -->
     <div id="dropShadowHeader"></div>
@@ -65,6 +65,8 @@
     <footer>
         <p class="tertiaryFont">copyright © 2020 benoit bucher all rights reserved</p>
     </footer>
+    <!-- Call script mobile menu -->
+    <script src="mobileMenu.js"></script>
 </body>
 
 </html>
