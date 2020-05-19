@@ -106,7 +106,18 @@ header {
 
     background-image: url("logo/logoVector.svg");
     background-size: contain;
+
+    transition: all 0.3s ease-in-out 0s;
 }
+
+#menuLogoClickZone:hover #menuLogo {
+    /* rotate logo when menu logo click zone is hovered */
+    transform: rotate(45deg);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+
+
 
 .menuCategory #burgerMenu {
     /* burger menu for MOBILE version */
