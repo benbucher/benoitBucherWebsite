@@ -1263,27 +1263,6 @@ img.hover-shadow {
 
 
 
-/* rules specific to touch screens */
-@media (hover: none) {
-
-    .mySlides {
-        /* reduce margins on left and right from 80px to 24px */
-        margin-left: 24px;
-        margin-right: 24px;
-        /* update width for new margin */
-        width: calc(100% - 48px);
-    }
-
-    .next,
-    .prev {
-        /* remove next and previous buttons */
-        display: none;
-    }
-
-}
-
-
-
 
 
 
