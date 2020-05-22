@@ -592,6 +592,7 @@ footer p {
 .homeCategoryItemFull {
     min-width: calc(100% - 2*24px);
     /* full width for full item */
+    margin: 24px;
 }
 
 .homeCategoryItemHalf h1,
@@ -1231,6 +1232,8 @@ img.hover-shadow {
         /* full width for all items */
         height: 65vw;
         /* height to have fixed aspect ratio */
+        margin: 24px;
+        /* set margin all around the element, as all items are alone (not two items per line as before for half item) */
     }
 
 
