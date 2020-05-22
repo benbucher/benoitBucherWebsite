@@ -581,7 +581,7 @@ footer p {
     display: flex;
     flex-direction: column;
     /* put the title on top and the picture bellow */
-    min-width: calc((100% - 3*24px)/2);
+    width: calc((100% - 3*24px)/2);
     /* half widht for half items */
     height: 39vw;
     /* height to have fixed aspect ratio */
@@ -590,7 +590,7 @@ footer p {
 }
 
 .homeCategoryItemFull {
-    min-width: calc(100% - 2*24px);
+    width: calc(100% - 2*24px);
     /* full width for full item */
     margin: 24px;
 }
@@ -1228,7 +1228,7 @@ img.hover-shadow {
 
     .homeCategoryItemFull,
     .homeCategoryItemHalf {
-        min-width: calc(100% - 2*24px);
+        width: calc(100% - 2*24px);
         /* full width for all items */
         height: 65vw;
         /* height to have fixed aspect ratio */
