@@ -589,6 +589,11 @@ footer p {
     text-decoration: none;
 }
 
+#categoriesForMobile :nth-child(2) {
+    /* add margin on the right for the second child */
+    margin-right: 24px;
+}
+
 .homeCategoryItemFull {
     width: calc(100% - 2*24px);
     /* full width for full item */
