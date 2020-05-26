@@ -103,7 +103,7 @@ function computeAndApplyMargins(albumNumber, numberOfImg) {
     for (var i = 0, c = numberOfImg; i < c; i++) {
 
         // draw random width
-        var width = getRandomSize(20, 95); // the width of the picture is between 20% and 95% of the container width
+        var width = getRandomSize(20, 85); // the width of the picture is between 20% and 85% of the container width
 
         // TODO? add condition for portrait picture to draw the size between 20 and 70 for landscape screens
         // TODO? consider the option to have the horizontal margin, only on the left and nothing on the right, to better center the pictures horizontally
