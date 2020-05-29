@@ -2,13 +2,34 @@
     "album_info":
     {
         "number": "album_006",
-        "title": "Album six title",
+        "title": "Random nights",
         "date": "2020.02.21",
         "description": "Album six description. Tristique nullam tellus ultrices diam pellentesque potenti commodo. Auctor aenean risus semper et pharetra blandit. Quam euismod integer augue commodo consectetur. Magna praesent malesuada vitae turpis. Sed sollicitudin integer arcu a et et feugiat amet aliquam. Aliquet non sem metus, lacus sit arcu.",
         "photoList": [
-            "P2330299.jpg",
-            "P2350170.jpg",
-            "P2340337.jpg"
+            "publish_album_night-1.jpg",
+            "publish_album_night-2.jpg",
+            "publish_album_night-3.jpg",
+            "publish_album_night-4.jpg",
+            "publish_album_night-5.jpg",
+            "publish_album_night-6.jpg",
+            "publish_album_night-7.jpg",
+            "publish_album_night-8.jpg",
+            "publish_album_night-9.jpg",
+            "publish_album_night-10.jpg",
+            "publish_album_night-11.jpg",
+            "publish_album_night-12.jpg",
+            "publish_album_night-13.jpg",
+            "publish_album_night-14.jpg",
+            "publish_album_night-15.jpg",
+            "publish_album_night-16.jpg",
+            "publish_album_night-17.jpg",
+            "publish_album_night-18.jpg",
+            "publish_album_night-19.jpg",
+            "publish_album_night-20.jpg",
+            "publish_album_night-21.jpg",
+            "publish_album_night-22.jpg",
+            "publish_album_night-23.jpg",
+            "publish_album_night-24.jpg"
         ]
     }
 }
