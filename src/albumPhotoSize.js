@@ -10,6 +10,16 @@ This script will be called by each html album page to generate the width and mar
 */
 
 
+// aspect ratio of screen
+if ((window.innerWidth / window.innerHeight) > 1) {
+    // lanscape screen
+    // max width for landscape set to smaller value
+    widthBound = [25, 60];
+} else {
+    // portrait screen 
+    // max width for portrait set to bigger value
+    widthBound = [40, 90];
+}
 
 // retrieve the name of the html page that called this current script
 var callerPagePath = window.location.pathname;
@@ -88,7 +98,7 @@ req.onload = function() {
     albumNumber = albumNumber + '_photo_';
 
     // call the function to compute and apply margins
-    computeAndApplyMargins(albumNumber, photoList.length);
+    computeAndApplyMargins(albumNumber, photoList.length, widthBound);
 
 };
 req.send(null);
@@ -97,13 +107,13 @@ req.send(null);
 
 
 // function to compute and apply margins for each picture in the html file
-function computeAndApplyMargins(albumNumber, numberOfImg) {
+function computeAndApplyMargins(albumNumber, numberOfImg, widthBound) {
 
     // go through the list of pictures of the album
     for (var i = 0, c = numberOfImg; i < c; i++) {
 
         // draw random width
-        var width = getRandomSize(20, 85); // the width of the picture is between 20% and 85% of the container width
+        var width = getRandomSize(widthBound[0], widthBound[1]); // the width of the picture is between 20% and 85% of the container width
 
         // TODO? add condition for portrait picture to draw the size between 20 and 70 for landscape screens
         // TODO? consider the option to have the horizontal margin, only on the left and nothing on the right, to better center the pictures horizontally
